@@ -3,7 +3,29 @@
 A lightweight tool that monitors `r/chromecast` for user issues, uses Google Gemini AI to triage and classify them, and displays the insights on a web dashboard.
 
 ---
-## 1. What This Project Is
+
+## 1. Why This Project?
+
+Reddit has become one of the earliest places where Chromecast users report real-world issues. In many cases, discussions appear on Reddit before official support tickets are filed, making it a valuable source for early issue detection.
+
+This project helps engineering teams automatically monitor Chromecast-related Reddit discussions to:
+
+- Detect newly emerging issues and regressions.
+- Identify recurring problems reported by multiple users.
+- Estimate the impact of an issue based on community activity.
+- Collect debugging information such as device models, firmware versions, app versions, and reproduction steps.
+- Support issue prioritization with real user feedback.
+- Enable community support teams to respond more quickly and gather additional diagnostic information.
+
+By continuously tracking Reddit discussions, engineering and support teams can discover potential product issues earlier and make more informed decisions about investigation and prioritization.
+
+---
+
+![Project Overview and Web UI Dashboard for reddit-chromecast-tracking](./Project%20Overview%20and%20Web%20UI%20Dashboard%20for%20reddit-chromecast-tracking.png)
+
+---
+
+## 2. What This Project Is
 
 - **Backend**: A Python script that fetches recent posts from `r/chromecast`, uses **Google Gemini AI** to summarize and categorize issues (component, device impact, severity), and logs the reports to a Google Sheet.
 - **Frontend**: A clean, responsive single-page web dashboard that reads live data from the Google Sheet and displays issue statistics, severity breakdowns, and detailed triage reports.
@@ -17,7 +39,7 @@ The script tracks r/chromecast posts from the **past 14 days** using a resilient
 3. The `r/chromecast` subreddit averages **20–30 posts every two weeks**.
 ---
 
-## 2. Folder Structure
+## 3. Folder Structure
 
 ```text
 reddit-chromecast-tracking/
@@ -33,7 +55,7 @@ reddit-chromecast-tracking/
 
 ---
 
-## 3. Configuration Setup
+## 4. Configuration Setup
 
 To keep sensitive credentials secure when pushing to GitHub:
 
@@ -53,7 +75,7 @@ To keep sensitive credentials secure when pushing to GitHub:
 
 ---
 
-## 4. How to Run
+## 5. How to Run
 
 ### Backend
 
