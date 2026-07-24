@@ -1,6 +1,6 @@
 # Reddit Chromecast Tracking
 
-A lightweight tool that monitors `r/chromecast` for user issues, uses Google Gemini AI to triage and classify them, and displays the insights on a web dashboard.
+An AI-powered monitoring system that analyzes Chromecast-related Reddit discussions with Gemini to detect emerging issues, assess their impact, and provide actionable insights for engineering teams.
 
 ---
 
@@ -16,6 +16,21 @@ This project helps engineering teams automatically monitor Chromecast-related Re
 - Collect debugging information such as device models, firmware versions, app versions, and reproduction steps.
 - Support issue prioritization with real user feedback.
 - Enable community support teams to respond more quickly and gather additional diagnostic information.
+
+```mermaid
+flowchart LR
+    A[Users] --> B[Reddit Discussions]
+    B --> C[Data Collection]
+    C --> D[Gemini Analysis]
+
+    D --> E[Issue Detection]
+    D --> F[Root Cause Analysis]
+    D --> G[Issue Categorization]
+    D --> H[Similar Issue Clustering]
+    D --> I[Impact Analysis]
+
+    I --> J[Engineering Investigation]
+```
 
 By continuously tracking Reddit discussions, engineering and support teams can discover potential product issues earlier and make more informed decisions about investigation and prioritization.
 
